@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #2E303D;
+  --fg: #E8E8ED;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inconsolata, monospace';
+  background-color: var(--bg);
+  color: var(--fg);
+  font-size: 16px;
+}

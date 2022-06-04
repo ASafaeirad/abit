@@ -3,7 +3,8 @@
   "compilerOptions": {
     "target": "ESNext",
     "allowJs": false,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "noPropertyAccessFromIndexSignature": false,
   },
   "include": ["web", "@types"],
   "references": [{ "path": "./tsconfig.vite.json" }]
