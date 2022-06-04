@@ -29,3 +29,5 @@ tailwindcss
 typegen
 unoptimized
 urql
+vite
+vitejs

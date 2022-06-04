@@ -1,0 +1,10 @@
+{
+  "extends": "@fullstacksjs/tsconfig/react",
+  "compilerOptions": {
+    "target": "ESNext",
+    "allowJs": false,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["web", "@types"],
+  "references": [{ "path": "./tsconfig.vite.json" }]
+}
