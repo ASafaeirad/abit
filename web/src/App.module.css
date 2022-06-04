@@ -1,6 +1,14 @@
-.canvas {
-  width: 100%;
+.app {
   height: 100%;
-  outline: none;
   padding: 60px 80px;
+}
+
+.block {
+  width: 100%;
+  outline: none;
+  min-height: var(--line-height);
+}
+
+.block.edit-mode {
+  background: var(--dim);
 }

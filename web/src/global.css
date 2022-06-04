@@ -5,6 +5,9 @@
 :root {
   --bg: #2E303D;
   --fg: #E8E8ED;
+  --dim: #1C1C24;
+
+  --line-height: 1em;
 }
 
 html, body, #root {
