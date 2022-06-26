@@ -1,30 +1,31 @@
-import { useState } from 'react';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 
 import style from './App.module.css';
+import { Block } from './components/Block';
+import { useAppSelector } from './store';
+import { selectNextLine, selectPrevLine } from './store/editor';
 
 const App = () => {
-  const [selected, setSelected] = useState(0);
+  const selected = useAppSelector(s => s.selected);
+  const mode = useAppSelector(s => s.mode);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const fn = (e: KeyboardEvent): void => {
+      if (mode === 'normal' && e.key === 'j') dispatch(selectNextLine());
+      if (mode === 'normal' && e.key === 'k') dispatch(selectPrevLine());
+    };
+
+    document.addEventListener('keyup', fn);
+    return () => document.removeEventListener('keyup', fn);
+  }, [dispatch, mode, selected]);
 
   return (
     <div className={style.app}>
-      <div
-        role="button"
-        tabIndex={0}
-        onKeyDown={() => setSelected(0)}
-        className={style.block}
-        onClick={() => setSelected(0)}
-        id="canvas"
-        contentEditable={selected === 0}
-      />
-      <div
-        role="button"
-        tabIndex={0}
-        onKeyDown={() => setSelected(1)}
-        className={style.block}
-        onClick={() => setSelected(1)}
-        id="canvas"
-        contentEditable={selected === 1}
-      />
+      {[0, 1, 2].map(i => (
+        <Block index={i} key={i} />
+      ))}
     </div>
   );
 };

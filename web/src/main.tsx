@@ -2,13 +2,17 @@ import './global.css';
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { Provider as StoreProvider } from 'react-redux';
 
 import App from './App';
+import { store } from './store';
 
 const root = document.getElementById('root')!;
 
 ReactDOM.createRoot(root).render(
   <React.StrictMode>
-    <App />
+    <StoreProvider store={store}>
+      <App />
+    </StoreProvider>
   </React.StrictMode>,
 );

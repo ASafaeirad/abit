@@ -1,0 +1,18 @@
+.block {
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+  min-height: var(--line-height);
+  padding: var(--space-2) var(--space-4);
+  border-radius: 4px;
+  caret-color: var(--accent);
+}
+
+.edit-mode {
+  background: var(--dim);
+  cursor: text;
+}
+
+.selected {
+  outline: 1px solid var(--accent);
+}

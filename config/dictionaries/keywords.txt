@@ -31,3 +31,5 @@ unoptimized
 urql
 vite
 vitejs
+classnames
+reduxjs

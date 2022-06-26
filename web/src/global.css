@@ -3,11 +3,18 @@
 }
 
 :root {
-  --bg: #2E303D;
+  --bg: #1C1C24;
   --fg: #E8E8ED;
-  --dim: #1C1C24;
+  --dim: rgba(0, 0, 0, 20%);
+  --accent: #F5C952;
 
   --line-height: 1em;
+
+  --space-1: 5px;
+  --space-2: 10px;
+  --space-3: 15px;
+  --space-4: 20px;
+  --space-5: 25px;
 }
 
 html, body, #root {
